@@ -1,9 +1,10 @@
-# Project: 
+# Project: How the public take the inaugural speeches.
 ### Output folder
 
 The output directory contains analysis output, processed datasets, logs, or other processed things.
 
 This folder has three subfolders: 
+
 (1)SentimentPlots: contains the plots from sentiment analysis. These plots record how the sentiment of speech evolve throughout each speech.
 
 Results shows that for sentiment, most of the speech express more positive feelings at the end of the speech compmaring to the begining.
