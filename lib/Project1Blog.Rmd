@@ -64,6 +64,7 @@ ff.all<-CleanCorpus(ff.all)
 ```
 
 ##Step3: Calculate the TF-IDF(Term Frequency-Inverse Document frequency) weighted matrix for speeches
+TF-IDF weights the terms while eliminating the influence of the most commonly used words in all the documents. In other words, term frequency is adjusted by the inverse document frequency, which take the common word in all the documents into account. The more common a word is in all documents, the smaller idf is, and tf-idf=tf*idf, is smaller.
 ```{r}
 
 dtm.all<-DocumentTermMatrix(ff.all,control=list(weighting =
@@ -102,8 +103,8 @@ p
 ggsave(paste(getwd(),"/output/","AllSpeechesWordCloud,".png",sep = ""),plot=last_plot())
 ```
 
-##Step5:Draw the wordcloud of all the speeches and also donuald trump's speech
-results shows that the most frequently used words in all speeches include "freedom"."constitute","ideal","law","tariff", and in Donald Trump's speech it includes "job","back","dream","everyone". The results shows the main policy Mr.Trump is holding.
+##Step5:Draw the wordcloud of all the speeches and also Donald trump's speech
+results shows that the most frequently used words in all speeches include "freedom"."constitute","ideal","public","law","tariff", and in Donald Trump's speech it includes "job","back","dream","everyone". The results shows the main policy Mr.Trump is holding.
 ```{r}
 par(mfrow=c(1,1))
 ##wordcloud of all the speeches
@@ -245,6 +246,8 @@ Here the method used is automated readability index, which has the following sco
 12	16-17	Eleventh grade
 13	17-18	Twelfth grade
 14	18-22	College
+
+automated readability index=4.71*(characters/words)+0.5*(words/sentences)-21.43
 ```{r}
 
 ReadabilityAnalysis<-function(sentences,president.name){
