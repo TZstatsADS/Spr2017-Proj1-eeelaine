@@ -3,7 +3,7 @@
 
 The output directory contains analysis output, processed datasets, logs, or other processed things.
 
-This folder has three subfolders: 
+This folder has four subfolders: 
 
 (1)SentimentPlots: contains the plots from sentiment analysis. These plots record how the sentiment of speech evolve throughout each speech.
 
