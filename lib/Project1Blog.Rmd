@@ -38,9 +38,8 @@ library(MASS)
 ```
 
 ##Step1: Read Speeachs and save in Corpus
-##please change the working directory before runing the code, current working directory is under my local drive.
+
 ```{r, message=FALSE, warning=FALSE}
-# setwd("C:/Users/Elaine/Documents/Columbia/Spring_2017/AppliedDataScience/Spr2017-Proj1-eeelaine")
 folder.path<- "../data/InauguralSpeeches/"
 speeches<-list.files(path=folder.path,pattern = "*.txt")
 prex.out<-substr(speeches,6,stop = nchar(speeches)-4)
